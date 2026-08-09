@@ -958,7 +958,8 @@
         <div class="glass contact-form-card">
           <h3>Request a Session</h3>
           <p class="form-sub">Free to request — we'll confirm details with you before anything is scheduled.</p>
-          <form action="mailto:tom@tofmedia.com" method="post" enctype="text/plain">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="a2f8aeff-3277-4a21-95dc-47b910a4d876">
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="First & last name" required />
@@ -981,6 +982,8 @@
               <label for="topic">What Do You Want to Learn?</label>
               <textarea id="topic" name="topic" rows="4" placeholder="Describe the crypto task or topic you'd like help with..."></textarea>
             </div>
+            <!-- Free CAPTCHA Box -->
+            <div class="h-captcha" data-captcha="true"></div>
             <button type="submit" class="form-submit">Send Request →</button>
             <p class="form-note">We typically respond within 24 hours.</p>
           </form>
@@ -998,6 +1001,6 @@
     </div>
   </footer>
 
-
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
