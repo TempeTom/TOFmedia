@@ -958,34 +958,39 @@
         <div class="glass contact-form-card">
           <h3>Request a Session</h3>
           <p class="form-sub">Free to request — we'll confirm details with you before anything is scheduled.</p>
+          
           <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key & Configuration -->
             <input type="hidden" name="access_key" value="a2f8aeff-3277-4a21-95dc-47b910a4d876">
+            <input type="hidden" name="subject" value="New Coaching Request from TOFmedia Website">
+            
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="First & last name" required />
             </div>
+            
             <div class="form-group">
               <label for="email">Email Address</label>
               <input type="email" id="email" name="email" placeholder="you@example.com" required />
             </div>
+            
             <div class="form-group">
-              <label for="level">Experience Level</label>
-              <select id="level" name="experience_level">
-                <option value="">Select your level...</option>
-                <option value="complete-beginner">Complete Beginner</option>
-                <option value="some-experience">Some Experience</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
+              <label for="experience">Experience Level</label>
+              <select id="experience" name="experience" required>
+                <option value="" disabled selected>Select your experience level</option>
+                <option value="beginner">Beginner (New to crypto)</option>
+                <option value="intermediate">Intermediate (Some experience, need specific help)</option>
+                <option value="advanced">Advanced (Complex DeFi, NFTs, or multi-step tasks)</option>
               </select>
             </div>
+            
             <div class="form-group">
-              <label for="topic">What Do You Want to Learn?</label>
-              <textarea id="topic" name="topic" rows="4" placeholder="Describe the crypto task or topic you'd like help with..."></textarea>
+              <label for="topic">What would you like to accomplish?</label>
+              <textarea id="topic" name="topic" rows="4" placeholder="Tell us what you want to learn or do (e.g., set up a MetaMask wallet, buy my first crypto, learn yield farming)..." required></textarea>
             </div>
-            <!-- Free CAPTCHA Box -->
-            <div class="h-captcha" data-captcha="true"></div>
-            <button type="submit" class="form-submit">Send Request →</button>
-            <p class="form-note">We typically respond within 24 hours.</p>
+            
+            <button type="submit" class="form-submit">Submit Coaching Request →</button>
+            <p class="form-note">🔒 We value your privacy. We never share your details or request sensitive seed phrases.</p>
           </form>
         </div>
       </div>
@@ -997,10 +1002,9 @@
     <div class="footer-inner">
       <div class="footer-brand">TOFmedia Coaching</div>
       <div class="footer-slogan">Show Me How</div>
-      <div class="footer-copy">© 2026 TOFmedia, LLC. All rights reserved.</div>
+      <p class="footer-copy">&copy; 2026 TOFmedia Coaching. All rights reserved.</p>
     </div>
   </footer>
 
-<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
