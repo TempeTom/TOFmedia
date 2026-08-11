@@ -1899,6 +1899,7 @@
   <span class="wave-divider" aria-hidden="true"></span>
 
   <!-- ── CONTACT ── -->
+  <!-- ── CONTACT ── -->
   <section id="contact" aria-labelledby="contact-title">
     <div class="section-inner">
       <div class="contact-wrap">
@@ -1922,7 +1923,15 @@
         <div class="glass contact-form-card">
           <h3>Request a Session</h3>
           <p class="form-sub">Free to request — we'll confirm details with you before anything is scheduled.</p>
-          <form action="mailto:tom@tofmedia.com" method="post" enctype="text/plain">
+          
+          <!-- Web3Forms Integration -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Your Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="a2f8aeff-3277-4a21-95dc-47b910a4d876">
+
+            <!-- Optional: Custom Subject Line for incoming emails -->
+            <input type="hidden" name="subject" value="New Coaching Request from TOFmedia Website">
+
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="First & last name" required />
